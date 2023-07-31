@@ -1,0 +1,298 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Forcast</title>
+      <link rel="stylesheet" href="static/mystyle.css">
+      <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+
+
+
+</head>
+<body>
+
+
+
+<div class="but1">
+
+<a href="{{city_name}}/home4"><button class="button">Upcoming Weathers</button></a>
+<a href="http://127.0.0.1:5000/"><button class="button"> Home </button></a>
+
+</div>
+ {% if celsius<0: %}
+<div class="snow">
+    <video class="vid5" autoplay muted loop>
+        <source src="static/video2.mp4" type="video/mp4">
+    </video>
+
+    <div class="location">
+    <h1 class="rain_city"> <img class="loc" src="static/location.png">{{city_name}}</h1>
+    </div>
+
+    <h2 class="rain_current">Currently</h2>
+
+<div class="rain_template">
+    <h2 class="rain_day">{{date}} {{day}}</h2>
+<div class="rain_txt">
+
+
+<h1 class="rain_temp"><strong>{{celsius}}&#176c</strong></h1>
+    <div class="rain_weather">
+<p> Mostly <strong>{{weather}} </strong> <br>Feels like {{celsius_feel}}&#176c</p>
+    </div>
+           </div>
+                     </div>
+
+                                </div>
+
+{% elif id<800 %}
+<div class="rain">
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+
+    <div class="location">
+    <h1 class="rain_city"> <img class="loc" src="static/location.png">{{city_name}}</h1>
+    </div>
+
+    <h2 class="rain_current">Currently</h2>
+
+<div class="rain_template">
+    <h2 class="rain_day">{{date}} {{day}}</h2>
+<div class="rain_txt">
+
+
+<h1 class="rain_temp"><strong>{{celsius}}&#176c</strong></h1>
+    <div class="rain_weather">
+<p> Mostly <strong>{{weather}} </strong> <br>Feels like {{celsius_feel}}&#176c</p>
+    </div>
+           </div>
+                     </div>
+
+                                </div>
+
+ {% elif id>=800: %}
+{% if time>7 and time<17: %}
+<div class="sun">
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud2.mp4" type="video/mp4">
+    </video>
+
+     <div class="location">
+    <h1 class="sun_city"> <img class="loc" src="static/location.png">{{city_name}}</h1>
+    </div>
+
+    <h2 class="sun_current">Currently</h2>
+
+<div class="sun_template">
+    <h2 class="sun_day">{{date}} {{day}}</h2>
+<div class="sun_txt">
+
+
+<h1 class="sun_temp"><strong>{{celsius}}&#176c</strong></h1>
+    <div class="sun_weather">
+<p> Mostly <strong>{{weather}} </strong> <br>Feels like {{celsius_feel}}&#176c</p>
+    </div>
+           </div>
+                     </div>
+
+                                </div>
+
+
+
+{% elif time>16 and time<19: %}
+<div class="evening">
+     <video class="vid2" autoplay muted loop>
+        <source src="static/evening.mp4" type="video/mp4">
+    </video>
+
+         <div class="location">
+    <h1 class="evening_city"> <img class="loc" src="static/location.png">{{city_name}}</h1>
+    </div>
+    <h2 class="evening_current">Currently</h2>
+
+<div class="evening_template">
+    <h2 class="evening_day">{{date}} {{day}}</h2>
+<div class="evening_txt">
+
+
+<h1 class="evening_temp"><strong>{{celsius}}&#176c</strong></h1>
+    <div class="evening_weather">
+<p> Mostly <strong>{{weather}} </strong> <br>Feels like {{celsius_feel}}&#176c</p>
+    </div>
+           </div>
+                     </div>
+
+                                </div>
+{% else: %}
+<div class="moon">
+     <video class="vid4" autoplay muted loop>
+        <source src="static/night.mp4" type="video/mp4">
+    </video>
+
+     <div class="location">
+    <h1 class="moon_city"> <img class="loc" src="static/location.png">{{city_name}}</h1>
+    </div>
+
+
+    <h2 class="moon_current">Currently</h2>
+
+<div class="moon_template">
+    <h2 class="moon_day">{{date}}   {{day}}</h2>
+<div class="moon_txt">
+
+
+<h1 class="moon_temp"><strong>{{celsius}}&#176c</strong></h1>
+    <div class="moon_weather">
+<p> Mostly <strong>{{weather}} </strong> <br>Feels like {{celsius_feel}}&#176c</p>
+    </div>
+           </div>
+                     </div>
+
+
+
+</div>
+{% endif %}
+{% endif %}
+<div class="next">
+    <div class="pre1">
+         <h2 class="time1">{{up_time1}}:00</h2>
+          <hr class="line1">
+         <h1 class="next_txt1">{{next1_t}}&#176c</h1>
+        {% if up_time1 >7 and up_time1< 19:%}
+            {% if next1_t < 0: %}
+            <img class="logo1_5" src="static/snowsun.png">
+            {%elif id1<800: %}
+            <img class="logo1_2" src="static/rain.png">
+            {%else:%}
+             <img class="logo1_1" src="static/partly-cloudy.png">
+
+            {% endif %}
+        {%else%}
+            {% if next1_t < 0: %}
+            <img class="logo1_4" src="static/snows.png">
+            {%elif id1<800: %}
+            <img class="logo1_2" src="static/rain.png">
+
+            {%else:%}
+            <img class="logo1_3" src="static/cloudy-night2.png">
+
+            {% endif %}
+        {% endif %}
+
+
+    </div>
+     <div class="pre2">
+          <h2 class="time2">{{up_time2}}:00</h2>
+          <hr class="line2">
+         <h1 class="next_txt2">{{next2_t}}&#176c</h1>
+         {% if up_time2 >7 and up_time2 <19:%}
+             {% if next1_t < 0: %}
+            <img class="logo1_5" src="static/snowsun.png">
+            {%elif id2<800: %}
+            <img class="logo1_2" src="static/rain.png">
+
+            {%else:%}
+             <img class="logo1_1" src="static/partly-cloudy.png">
+
+            {% endif %}
+        {%else%}
+            {% if next1_t < 0: %}
+            <img class="logo1_4" src="static/snows.png">
+            {%elif id2<800: %}
+            <img class="logo1_2" src="static/rain.png">
+
+            {%else:%}
+            <img class="logo1_3" src="static/cloudy-night2.png">
+
+            {% endif %}
+        {% endif %}
+    </div>
+     <div class="pre3">
+          <h2 class="time3">{{up_time3}}:00</h2>
+          <hr class="line3">
+         <h1 class="next_txt3">{{next3_t}}&#176c</h1>
+         {% if up_time3 >7 and up_time3 <19:%}
+            {% if next1_t < 0: %}
+            <img class="logo1_5" src="static/snowsun.png">
+            {%elif id3<800: %}
+            <img class="logo1_2" src="static/rain.png">
+
+            {%else:%}
+             <img class="logo1_1" src="static/partly-cloudy.png">
+
+            {% endif %}
+        {%else%}
+            {% if next1_t < 0: %}
+            <img class="logo1_4" src="static/snows.png">
+            {%elif id3<800: %}
+            <img class="logo1_2" src="static/rain.png">
+            {%else:%}
+            <img class="logo1_3" src="static/cloudy-night2.png">
+
+            {% endif %}
+        {% endif %}
+    </div>
+     <div class="pre4">
+          <h2 class="time4">{{up_time4}}:00</h2>
+          <hr class="line4">
+         <h1 class="next_txt4">{{next4_t}}&#176c</h1>
+          {% if up_time4 >7 and up_time4 <19:%}
+             {% if next1_t < 0: %}
+            <img class="logo1_5" src="static/snowsun.png">
+            {%elif id4<800: %}
+            <img class="logo1_2" src="static/rain.png">
+            {%else:%}
+             <img class="logo1_1" src="static/partly-cloudy.png">
+
+            {% endif %}
+        {%else%}
+           {% if next1_t < 0: %}
+            <img class="logo1_4" src="static/snows.png">
+            {%elif id4<800: %}
+            <img class="logo1_2" src="static/rain.png">
+
+            {%else:%}
+            <img class="logo1_3" src="static/cloudy-night2.png">
+
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="about">
+
+    <div class="humi">
+        <h3 class="humi_head">HUMIDITY</h3>
+        <h2 class="humi_txt">{{humidity}}%</h2>
+    </div>
+    <div class="pre">
+
+        <h3 class="pre_head">PRESSURE</h3>
+        <h2 class="pre_txt">{{pressure}} hPa</h2>
+
+    </div>
+     <div class="des">
+
+        <h3 class="des_head">Description</h3>
+        <h2 class="des_txt">{{desc}}</h2>
+
+    </div>
+     <div class="wind">
+
+        <h3 class="wind_head">Wind</h3>
+        <h2 class="wind_txt">{{air}}Km/h</h2>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

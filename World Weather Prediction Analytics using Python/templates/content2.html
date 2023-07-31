@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upcoming weather</title>
+          <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+
+    <style>
+        .loc
+{
+display:flex;
+}
+.pointer
+{
+width:3%;
+height:5%;
+padding:20px;
+}
+video {
+  object-fit:cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.container {
+
+  background-color:#434242;
+  border: 2px solid #000;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:3%;
+
+}
+.header{
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+    </style>
+</head>
+<body>
+<div class="loc">
+    <h1>{{location}}</h1>
+</div>
+
+
+
+<div class="container">
+ {% if id2<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date2}}</h5>
+    <h5>TIME:{{ti2}}</h5>
+    <h1>{{temp2}}&#176c</h1>
+        <h1>{{wea2}}</h1>
+    </div>
+
+{% elif temp2<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date2}}</h5>
+    <h5>TIME:{{ti2}}</h5>
+    <h1>{{temp2}}&#176c</h1>
+      <h1>{{wea2}}</h1>
+  </div>
+
+{% elif id2>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date2}}</h5>
+    <h5>TIME:{{ti2}}</h5>
+    <h1>{{temp2}}&#176c</h1>
+        <h1>{{wea2}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+
+<div class="container">
+ {% if id3<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date3}}</h5>
+    <h5>TIME:{{ti3}}</h5>
+    <h1>{{temp3}}&#176c</h1>
+        <h1>{{wea3}}</h1>
+    </div>
+
+{% elif temp3<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date3}}</h5>
+    <h5>TIME:{{ti3}}</h5>
+    <h1>{{temp3}}&#176c</h1>
+      <h1>{{wea3}}</h1>
+  </div>
+
+{% elif id3>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date3}}</h5>
+    <h5>TIME:{{ti3}}</h5>
+    <h1>{{temp3}}&#176c</h1>
+        <h1>{{wea3}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+
+
+<div class="container">
+ {% if id4<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date4}}</h5>
+    <h5>TIME:{{ti4}}</h5>
+    <h1>{{temp4}}&#176c</h1>
+        <h1>{{wea4}}</h1>
+    </div>
+
+{% elif temp4<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date4}}</h5>
+    <h5>TIME:{{ti4}}</h5>
+    <h1>{{temp4}}&#176c</h1>
+      <h1>{{wea4}}</h1>
+  </div>
+
+{% elif id4>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date4}}</h5>
+    <h5>TIME:{{ti4}}</h5>
+    <h1>{{temp4}}&#176c</h1>
+        <h1>{{wea4}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+
+
+<div class="container">
+ {% if id5<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date5}}</h5>
+    <h5>TIME:{{ti5}}</h5>
+    <h1>{{temp5}}&#176c</h1>
+        <h1>{{wea5}}</h1>
+    </div>
+
+{% elif temp5<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date5}}</h5>
+    <h5>TIME:{{ti5}}</h5>
+    <h1>{{temp5}}&#176c</h1>
+      <h1>{{wea5}}</h1>
+  </div>
+
+{% elif id5>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date5}}</h5>
+    <h5>TIME:{{ti5}}</h5>
+    <h1>{{temp5}}&#176c</h1>
+        <h1>{{wea5}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+
+<div class="container">
+ {% if id6<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date6}}</h5>
+    <h5>TIME:{{ti6}}</h5>
+    <h1>{{temp6}}&#176c</h1>
+        <h1>{{wea6}}</h1>
+    </div>
+
+{% elif temp6<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date6}}</h5>
+    <h5>TIME:{{ti6}}</h5>
+    <h1>{{temp6}}&#176c</h1>
+      <h1>{{wea6}}</h1>
+  </div>
+
+{% elif id6>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date6}}</h5>
+    <h5>TIME:{{ti6}}</h5>
+    <h1>{{temp6}}&#176c</h1>
+        <h1>{{wea6}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id7<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date7}}</h5>
+    <h5>TIME:{{ti7}}</h5>
+    <h1>{{temp7}}&#176c</h1>
+        <h1>{{wea7}}</h1>
+    </div>
+
+{% elif temp7<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date7}}</h5>
+    <h5>TIME:{{ti7}}</h5>
+    <h1>{{temp7}}&#176c</h1>
+      <h1>{{wea7}}</h1>
+  </div>
+
+{% elif id7>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date7}}</h5>
+    <h5>TIME:{{ti7}}</h5>
+    <h1>{{temp7}}&#176c</h1>
+        <h1>{{wea7}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+<div class="container">
+ {% if id8<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date8}}</h5>
+    <h5>TIME:{{ti8}}</h5>
+    <h1>{{temp8}}&#176c</h1>
+        <h1>{{wea8}}</h1>
+    </div>
+
+{% elif temp8<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date8}}</h5>
+    <h5>TIME:{{ti8}}</h5>
+    <h1>{{temp8}}&#176c</h1>
+      <h1>{{wea8}}</h1>
+  </div>
+
+{% elif id8>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date8}}</h5>
+    <h5>TIME:{{ti8}}</h5>
+    <h1>{{temp8}}&#176c</h1>
+        <h1>{{wea8}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+<div class="container">
+ {% if id9<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date9}}</h5>
+    <h5>TIME:{{ti9}}</h5>
+    <h1>{{temp9}}&#176c</h1>
+        <h1>{{wea9}}</h1>
+    </div>
+
+{% elif temp9<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date9}}</h5>
+    <h5>TIME:{{ti9}}</h5>
+    <h1>{{temp9}}&#176c</h1>
+      <h1>{{wea9}}</h1>
+  </div>
+
+{% elif id9>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date9}}</h5>
+    <h5>TIME:{{ti9}}</h5>
+    <h1>{{temp9}}&#176c</h1>
+        <h1>{{wea9}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id10<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date10}}</h5>
+    <h5>TIME:{{ti10}}</h5>
+    <h1>{{temp10}}&#176c</h1>
+        <h1>{{wea10}}</h1>
+    </div>
+
+{% elif temp10<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date10}}</h5>
+    <h5>TIME:{{ti10}}</h5>
+    <h1>{{temp10}}&#176c</h1>
+      <h1>{{wea10}}</h1>
+  </div>
+
+{% elif id10>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date10}}</h5>
+    <h5>TIME:{{ti10}}</h5>
+    <h1>{{temp10}}&#176c</h1>
+        <h1>{{wea10}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id11<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date11}}</h5>
+    <h5>TIME:{{ti11}}</h5>
+    <h1>{{temp11}}&#176c</h1>
+        <h1>{{wea11}}</h1>
+    </div>
+
+{% elif temp11<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date11}}</h5>
+    <h5>TIME:{{ti11}}</h5>
+    <h1>{{temp11}}&#176c</h1>
+      <h1>{{wea11}}</h1>
+  </div>
+
+{% elif id11>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date11}}</h5>
+    <h5>TIME:{{ti11}}</h5>
+    <h1>{{temp11}}&#176c</h1>
+        <h1>{{wea11}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id12<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date12}}</h5>
+    <h5>TIME:{{ti12}}</h5>
+    <h1>{{temp12}}&#176c</h1>
+        <h1>{{wea12}}</h1>
+    </div>
+
+{% elif temp12<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date12}}</h5>
+    <h5>TIME:{{ti12}}</h5>
+    <h1>{{temp12}}&#176c</h1>
+      <h1>{{wea12}}</h1>
+  </div>
+
+{% elif id12>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date12}}</h5>
+    <h5>TIME:{{ti12}}</h5>
+    <h1>{{temp12}}&#176c</h1>
+        <h1>{{wea12}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date14}}</h5>
+    <h5>TIME:{{ti14}}</h5>
+    <h1>{{temp14}}&#176c</h1>
+        <h1>{{wea14}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date14}}</h5>
+    <h5>TIME:{{ti14}}</h5>
+    <h1>{{temp14}}&#176c</h1>
+      <h1>{{wea14}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date14}}</h5>
+    <h5>TIME:{{ti14}}</h5>
+    <h1>{{temp14}}&#176c</h1>
+        <h1>{{wea14}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+<div class="container">
+ {% if id13<800 %}
+
+
+    <video class="vid3" autoplay muted loop>
+        <source src="static/rain.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+{% elif temp13<0: %}
+
+    <video class="vid" autoplay muted loop>
+        <source src="static/snow.mp4" type="video/mp4">
+    </video>
+
+  <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+      <h1>{{wea13}}</h1>
+  </div>
+
+{% elif id13>=800: %}
+
+
+    <video class="vid1" autoplay muted loop>
+        <source src="static/cloud.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+    <h5>DATE:{{date13}}</h5>
+    <h5>TIME:{{ti13}}</h5>
+    <h1>{{temp13}}&#176c</h1>
+        <h1>{{wea13}}</h1>
+    </div>
+
+
+{% endif %}
+
+
+</div>
+
+
+
+</body>
+</html>

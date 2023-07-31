@@ -1,0 +1,71 @@
+.logo
+{
+padding-top:40px;
+height:10%;
+width:10%;
+
+}
+.img
+{
+margin-left:40%;
+height:250%;
+width:220%;
+
+}
+
+.container
+{
+margin:15%;
+height:30%;
+width:25%;
+margin-left:35%;
+background:url(img1.jpg);
+border:solid;
+border-color:blue;
+
+}
+
+
+.login-form
+{
+padding:30px;
+}
+.d
+{
+margin:5%;
+width:70%;
+
+}
+.contents
+{
+margin-left:12%;
+}
+.but{
+display:inline;
+margin-left:20%;
+
+}
+.butn{
+display:inline;
+padding-left:230px;
+padding-top:50px;
+}
+
+.button {
+
+  background-color: #4649FF;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 8px 4px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+
